@@ -1,0 +1,26 @@
+//piscando a led
+void setup() {
+  
+  pinMode(D4, OUTPUT); // definindo o pino D4 como o pino da LED
+
+  Serial.begin(115200); //iniciando a comunicação serial
+
+  Serial.println("verificando o estado da led:");//primeira mensagem que vai aparecer no monitor serial
+  
+
+}
+
+void loop() {
+
+  digitalWrite(D4, HIGH); //liga a led
+
+  Serial.println("led acesa");
+
+  delay(1500); //valor é em milisegundos
+
+  digitalWrite(D4, LOW);
+
+  Serial.println("led apagada");
+
+  delay(1000);
+}
